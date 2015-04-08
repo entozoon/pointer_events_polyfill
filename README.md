@@ -14,6 +14,13 @@ Include any reasonable recent version of **jQuery** and **pointer\_events\_polyf
 
 That's it! Any "pointer-events: none" attributes will now work seamlessly in IE.
 
+## IE8 Support
+
+IE8 doesn't recognise the pointer-events property at all, so you need to add a data-pointer-events-none attribute to your element, for example:
+```
+<div data-pointer-events-none></div>
+```
+
 ## Options
 
 You can also pass any of the following options into the *initialize* call:
@@ -25,4 +32,5 @@ You can also pass any of the following options into the *initialize* call:
 ## License
 
 (c) 2013, Kent Mewhort, licensed under BSD. See LICENSE.txt for details.
+(Forked and given IE8 support by Michael Cook)
 
