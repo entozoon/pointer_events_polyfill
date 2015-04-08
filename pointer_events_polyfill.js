@@ -44,7 +44,8 @@ PointerEventsPolyfill.initialize = function(options){
 PointerEventsPolyfill.prototype.register_mouse_events = function(){
     // register on all elements (and all future elements) matching the selector
     $(document).on(this.options.mouseEvents.join(" "), this.options.selector, function(e){
-       if($(this).css('pointer-events') == 'none'){
+       if($(this).css('pointer-events') == 'none' ||
+          $(this).attr('data-pointer-events-none') != undefined) {
              // peak at the element below
              var origDisplayAttribute = $(this).css('display');
              $(this).css('display','none');
